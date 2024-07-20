@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f242d;
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #2a2e39;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #0ef;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h1 span {
+    color: #0ef;
+}
+
+.home-content p {
+    font-size: 16px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.social-media a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0ef;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #0ef;
+    color: #1f242d;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.home-img img {
+    width: 350px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Example styling, optional */
+    margin-right: -20px;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover {
+    background: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+}
+.about h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.about {
+    padding: 50px 10%;
+    background: #1f242d;
+    color: #fff;
+}
+
+.about h2, .about h4, .about p, .about ul {
+    margin-bottom: 20px;
+}
+
+.about ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about ul li {
+    margin-bottom: 10px;
+}
+
+.separator {
+    height: 20px; /* Adjust thickness as needed */
+    background-color: #333; /* Darker color for the separator */
+    margin: 50px 0; /* Add margin for spacing */
+}
+
+
+.panel-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of panels */
+    justify-content: space-between;
+    gap: 20px; /* Space between panels */
+}
+
+.panel {
+    background: #2a2e39;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-width: 220px; /* Ensures panels don't get too narrow */
+}
+
+.panel h4 {
+    margin-bottom: 20px;
+    color: #0ef;
+}
+
+.panel-content h4 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.panel-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.panel-content ul li {
+    margin-bottom: 10px;
+}
+
+.panel-content p {
+    margin-bottom: 20px;
+}
+
+.certifications ul, .seminars ul {
+    padding-left: 0;
+}
+
+.certifications ul li, .seminars ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.separator2 {
+    height: 20px; /* Adjust thickness as needed */
+    background-color: #333; /* Darker color for the separator */
+    margin: 50px 0; /* Add margin for spacing */
+}
+.projects h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.panel-container2 {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center the items horizontally */
+    padding: 20px; /* Add padding around the container */
+    gap: 20px; /* Space between panels */
+}
+
+.panel-container3 {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center the items horizontally */
+    padding: 20px; /* Add padding around the container */
+    gap: 20px; /* Space between panels */
+}
+.panel {
+    background: #2a2e39;
+    padding: 15px; /* Padding inside each panel */
+    border-radius: 8px;
+    width: 100%; /* Take full width of the container */
+    max-width: 800px; /* Limit the width if needed */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Slightly smaller shadow */
+    margin: 0 auto; /* Center the panel */
+}
+
+.project-img-container {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    height: auto; /* Ensure height adjusts based on content */
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.project-img {
+    width: 100%; /* Make sure image fills the container */
+    max-width: 100%; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional styling */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+.capstone-img-container {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    height: auto; /* Ensure height adjusts based on content */
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.capstone-img {
+    width: 100%; /* Make sure image fills the container */
+    max-width: 100%; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional styling */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+.capstone h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.separator3 {
+    height: 20px; /* Adjust thickness as needed */
+    background-color: #333; /* Darker color for the separator */
+    margin: 50px 0; /* Add margin for spacing */
+}
+.practicum h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+/* Keyframes */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
